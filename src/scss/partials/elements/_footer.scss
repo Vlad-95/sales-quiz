@@ -1,0 +1,18 @@
+.footer {
+    padding: 10px 0;
+    background-color: $bgGray;
+
+    &__wrap {
+        p {
+            font-size: 10px; 
+            color: #0b4f7f4d; 
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        background-color: $white;
+    }
+}

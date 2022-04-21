@@ -1,0 +1,125 @@
+.quiz-intro {
+    background-color: #fcfcfc;
+    position: relative;
+
+    &__wrap {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__image {
+        display: none;
+        position: relative;
+        left: -15px;
+        top: 0;
+        width: calc(100% + 30px);
+        height: 40vw;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+    }
+
+    &__title {
+        font-size: 6vh;
+        line-height: 130%;
+        margin-bottom: 5vh;
+        font-weight: 700;
+        color: $text;
+        max-width: 992px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__subtitle {
+        font-size: 3vh;
+        line-height: 145%;
+        font-weight: 400;
+        color: $text;
+        margin-bottom: 5vh;
+        max-width: 658px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 129%;
+        color: #ffffff;
+        font-weight: 400;
+        background: $green;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        padding: 15px;
+        display: block;
+        text-align: center;
+        max-width: 200px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .quiz-intro {
+        background-color: #ffffff;
+
+        &__title {
+            font-size: 5vw;
+            margin-bottom: 5vh;
+        }
+
+        &__subtitle {
+            font-size: 2.5vw;
+            line-height: 145%;
+            margin-bottom: 5vh;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .quiz-intro {
+        &__wrap {
+            padding: 0 0 60px;
+            overflow: visible;
+            display: block;
+            min-height: auto;
+        }
+
+        &__image {
+            display: block;
+            height: 30vw;
+        }
+
+        &__title {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: 2;
+            font-size: 3vw;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .quiz-intro {
+        &__image {
+            height: 40vw;
+        }
+
+        &__title {
+            font-size: 16px;
+        }
+
+        &__subtitle {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+    }
+}
